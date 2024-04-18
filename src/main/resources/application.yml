@@ -3,3 +3,4 @@ spring:
     nacos:
       discovery:
         server-addr: ${NACOS_SERVER_ADDR:124.222.121.252:8848}
+        namespace: db3d5d0c-8625-4b26-858b-c852544930f5
