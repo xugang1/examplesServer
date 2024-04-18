@@ -17,9 +17,15 @@ public class LoginController {
     private LoginService loginService;
 
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public Result login(@RequestBody User user) {
         EncryptUtil.encrypt(user);
         return loginService.login(user);
+    }
+
+    @PostMapping("/register")
+    public Result register(@RequestBody User user) {
+        EncryptUtil.encrypt(user);
+        return loginService.register(user);
     }
 }

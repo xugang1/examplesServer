@@ -10,4 +10,6 @@ import java.util.List;
 public interface LoginMapper {
 
     User login(User user);
+
+    int insert(User user);
 }

@@ -22,4 +22,14 @@ public class LoginService {
         }
         return ResultHandler.customResult(401, null, "当前登录用户不存在");
     }
+
+    public Result register(User user) {
+        try {
+            loginMapper.insert(user);
+            return ResultHandler.success("注册成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultHandler.success("注册失败");
+        }
+    }
 }
