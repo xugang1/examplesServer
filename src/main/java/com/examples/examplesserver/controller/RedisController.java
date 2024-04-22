@@ -5,6 +5,7 @@ import com.examples.examplesserver.entity.User;
 import com.examples.examplesserver.service.RedisService;
 import com.examples.examplesserver.utils.EncryptUtil;
 import com.examples.examplesserver.utils.RedisUtil;
+import com.examples.examplesserver.utils.ResultHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

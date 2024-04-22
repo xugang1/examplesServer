@@ -32,6 +32,19 @@ public class JWTTokenUtil {
     }
 
     /*
+    * 验证令牌
+    * */
+    public static boolean validToken(String token) {
+        try{
+            Claims claims = Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /*
     *解析令牌
     * */
     public static String parserToken(String token) {

@@ -19,4 +19,8 @@
         insert into blog_user (username, password) value (#{username}, #{password})
     </insert>
 
+    <insert id="insertUserInfo">
+        insert into blog_user_info (id, username, age, college, tel) value (#{id}, #{username}, #{age}, #{college}, #{tel})
+    </insert>
+
 </mapper>
