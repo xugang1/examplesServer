@@ -1,9 +1,19 @@
 spring:
+  application:
+    name: examplesServer
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.222.121.252:3306/blog
+    username: root
+    password: xugang1998
+
   cloud:
     nacos:
       discovery:
         server-addr: ${NACOS_SERVER_ADDR:124.222.121.252:8848}
         namespace: db3d5d0c-8625-4b26-858b-c852544930f5
+        username: nacos
+        password: xugang1998
   data:
     redis:
       host: 124.222.121.252
@@ -11,3 +21,8 @@ spring:
       password: xugang1998
       timeout: 3000
       database: 0
+server:
+  port: 9999
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
